@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./UserHome.css";
+import "./AdminHome.css";
 
-const UserHome = () => {
+const AdminHome = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -10,7 +10,7 @@ const UserHome = () => {
   };
 
   return (
-    <div className="user-interface">
+    <div className="admin-interface">
       <header className="header">
         <h1>Hospital Patient Record System</h1>
       </header>
@@ -69,4 +69,4 @@ const UserHome = () => {
   );
 };
 
-export default UserHome;
+export default AdminHome;

@@ -11,8 +11,7 @@ const AdminLogin = () => {
     
             <label htmlFor="admin-password">Password:</label>
             <input type="password" id="admin-password" placeholder="Enter your password" />
-    
-            <button type="submit">Login</button>
+            <a href="/admin/home">Login</a>
           </form>
         </div>
       );
