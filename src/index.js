@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home'; // Assuming Home is in a separate file
 import UserLogin from './UserLogin'; // Assuming UserLogin is in a separate file
-import AdminLogin from './AdminLogin'; // Assuming AdminLogin is in a separate file
+import AdminLogin from './AdminLogin'; // Assuming AdminLogin is in a separate fils
+import UserHome from './UserHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/user" element={<UserLogin />} />
         <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/userhome" element={<UserHome />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

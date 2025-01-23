@@ -43,7 +43,7 @@
     outline: none;
   }
   
-  .login-form button {
+  .login-form a {
     padding: 15px;
     background: linear-gradient(to right, #11998e, #38ef7d);
     color: #fff;
