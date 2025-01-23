@@ -34,6 +34,7 @@
   .login-button {
     padding: 15px 40px;
     background: linear-gradient(to right, #11998e, #38ef7d);
+    border: none;
     color: #fff;
     text-decoration: none;
     font-size: 1.4rem;
