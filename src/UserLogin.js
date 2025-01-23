@@ -10,7 +10,8 @@ import './UserLogin.css'
 
         <label htmlFor="user-password">Password:</label>
         <input type="password" id="user-password" placeholder="Enter your password" />
-        <a href="/userhome">Login</a>
+        
+        <a href="/user/home">Login</a>
       </form>
     </div>
   );

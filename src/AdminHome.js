@@ -1,68 +1,37 @@
-import React, { useState } from "react";
-import "./AdminHome.css";
+import React from 'react';
+import './AdminHome.css';
 
 const AdminHome = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearch = (e) => {
-    setSearchQuery(e.target.value);
-    // Add logic to filter/search records based on the search query
-  };
-
   return (
-    <div className="admin-interface">
-      <header className="header">
-        <h1>Hospital Patient Record System</h1>
-      </header>
-      <div className="content">
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search by patient name or ID..."
-            value={searchQuery}
-            onChange={handleSearch}
-            className="search-input"
-          />
+    <div className="admin-home-container">
+      <div className="top-bar">
+        <h2>CareSync Admin Panel</h2>
+        <div className="admin-profile">
+          <img src="/path-to-admin-pic.jpg" alt="Admin Profile" className="profile-pic" />
+          <span className="admin-name">Admin</span>
         </div>
-        <div className="patient-list">
-          <h2>Patient Records</h2>
-          <table className="patient-table">
-            <thead>
-              <tr>
-                <th>Patient ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Condition</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Example data rows - replace with dynamic data */}
-              <tr>
-                <td>101</td>
-                <td>John Doe</td>
-                <td>45</td>
-                <td>Diabetes</td>
-                <td>
-                  <button className="view-button">View</button>
-                  <button className="edit-button">Edit</button>
-                  <button className="delete-button">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>102</td>
-                <td>Jane Smith</td>
-                <td>34</td>
-                <td>Hypertension</td>
-                <td>
-                  <button className="view-button">View</button>
-                  <button className="edit-button">Edit</button>
-                  <button className="delete-button">Delete</button>
-                </td>
-              </tr>
-              {/* Add more rows dynamically */}
-            </tbody>
-          </table>
+      </div>
+
+      <div className="content">
+        <h1>Welcome, Admin</h1>
+        <div className="admin-actions">
+          <div className="action-card">
+            <h3>Add Patient Record</h3>
+            <p>Enter and manage patient medical records efficiently.</p>
+            <button>Add Record</button>
+          </div>
+
+          <div className="action-card">
+            <h3>View Patient Records</h3>
+            <p>Access and review all patient records securely.</p>
+            <button>View Records</button>
+          </div>
+
+          <div className="action-card">
+            <h3>Manage Appointments</h3>
+            <p>Schedule and oversee patient appointments.</p>
+            <button>Manage Appointments</button>
+          </div>
         </div>
       </div>
     </div>
