@@ -75,7 +75,7 @@
     color: #555;
   }
   
-  .info-card button {
+  .info-card a {
     padding: 10px 20px;
     background: #3498db;
     color: #fff;
@@ -87,7 +87,7 @@
     transition: background 0.3s ease;
   }
   
-  .info-card button:hover {
+  .info-card a:hover {
     background: #2980b9;
   }
   

@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Home'; // Assuming Home is in a separate file
-import UserLogin from './UserLogin'; // Assuming UserLogin is in a separate file
-import AdminLogin from './AdminLogin'; // Assuming AdminLogin is in a separate fils
+import Home from './Home'; 
+import UserLogin from './UserLogin'; 
+import AdminLogin from './AdminLogin'; 
 import AdminHome from './AdminHome';
 import UserHome from './UserHome';
+import Records from './Records';
+import AddRecord from './AddRecord';
+import ProtectedRoutes from './ProtectedRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,10 +18,18 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/user" element={<UserLogin />} />
-        <Route path="/admin" element={<AdminLogin />} />
+
+        <Route element={<ProtectedRoutes/>}>
         <Route path="/admin/home" element={<AdminHome />} />
+
+        </Route>
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/user" element={<UserLogin />} />
         <Route path="/user/home" element={<UserHome />} />
+        <Route path="/user/home/records" element={<Records />} />
+        <Route path="/user/home/records/add-record" element={<AddRecord />} />
+        
+        
 
       </Routes>
     </BrowserRouter>
